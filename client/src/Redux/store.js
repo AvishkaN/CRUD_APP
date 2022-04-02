@@ -1,10 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import clickSlice from './slices/productSlice';
+import productSlice from './slices/productSlice';
+import clickSlice from './slices/clickSlice';
 
 
 export const store = configureStore({
   reducer: {
-    products: clickSlice,
+    
+    clicks: clickSlice,
+    products: productSlice,
+
   },
   middleware: (getDefaultMiddleware) =>
   getDefaultMiddleware({
